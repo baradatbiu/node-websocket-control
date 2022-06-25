@@ -23,6 +23,9 @@ wss.on("connection", (ws) => {
     decodeStrings: false,
   });
 
+  duplex.pipe(process.stdout);
+  process.stdin.pipe(duplex);
+
   duplex.on("data", async (data: string) => {
     const [command, valueOne, valueTwo = ""] = data.toString().split(" ");
     const numberOfPx = parseInt(valueOne);
