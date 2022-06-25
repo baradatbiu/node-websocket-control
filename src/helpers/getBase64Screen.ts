@@ -5,8 +5,8 @@ import { MouseCoords } from "../types/commands";
 const SCREEN_SIZE = 200;
 
 export const getBase64Screen = async ({ x, y }: MouseCoords) => {
-  const coordX = x;
-  const coordY = y;
+  const coordX = x - SCREEN_SIZE / 2;
+  const coordY = y - SCREEN_SIZE / 2;
 
   const screen = robot.screen.capture(coordX, coordY, SCREEN_SIZE, SCREEN_SIZE);
 
