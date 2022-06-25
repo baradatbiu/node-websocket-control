@@ -75,6 +75,6 @@ export class Commander {
 
   displayCommandResult(command: string) {
     const { x, y } = this.currentCoords;
-    console.log(`result: ${command} from x:${x},y:${y} - done`);
+    console.log(`result: ${command} from x:${x},y:${y} - done\n`);
   }
 }
