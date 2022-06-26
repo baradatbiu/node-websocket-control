@@ -40,7 +40,7 @@ export class Commander {
 
   drawCircle(radius: number) {
     const drawer = (nextX: number, nextY: number) =>
-      robot.moveMouseSmooth(nextX, nextY);
+      robot.dragMouse(nextX, nextY);
 
     robot.mouseToggle("down", this.mouseButton);
     circleDrawer(this.currentCoords, radius, drawer);
